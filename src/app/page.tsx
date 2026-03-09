@@ -615,7 +615,7 @@ export default function Home() {
                   {/* CEO Info */}
                   <div className={`flex-1 ${isArabic ? 'text-right' : 'text-left'}`}>
                     <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
-                      {isArabic ? 'عبدالنور' : 'Abdennour'}
+                      {isArabic ? 'كينغ أريوس' : 'King Arios'}
                     </h3>
                     <p className="text-amber-400 font-medium mb-4">{isArabic ? 'المؤسس والمدير التنفيذي' : 'Founder & CEO'}</p>
                     <p className="text-muted-foreground mb-6 leading-relaxed">
