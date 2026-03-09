@@ -31,7 +31,10 @@ import {
   MessageCircle,
   Youtube,
   Twitter,
-  Send
+  Send,
+  Award,
+  Briefcase,
+  Calendar
 } from 'lucide-react'
 
 const portalUrl = 'https://infinityalgoacademy.net/portal/'
@@ -559,6 +562,167 @@ export default function Home() {
                 <p className="text-sm text-muted-foreground">{t.quickLinks.store_subtitle}</p>
               </div>
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="py-20 bg-background relative overflow-hidden">
+        <div className="absolute inset-0 grid-pattern opacity-20"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <Badge className="bg-purple-500/10 text-purple-400 border-purple-500/20 mb-4">
+              <Users className="w-3 h-3 ml-1" />
+              {isArabic ? 'فريقنا' : 'Our Team'}
+            </Badge>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">
+              <span className="text-foreground">{isArabic ? 'تعرف على ' : 'Meet Our '}</span>
+              <span className="text-gold-gradient">{isArabic ? 'فريقنا' : 'Team'}</span>
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              {isArabic 
+                ? 'فريق من الخبراء المتخصصين في مجال التداول والتحليل الفني'
+                : 'A team of experts specialized in trading and technical analysis'
+              }
+            </p>
+          </div>
+          
+          {/* CEO Section */}
+          <div className="max-w-4xl mx-auto mb-16">
+            <Card className="bg-gradient-to-br from-card via-card to-amber-500/5 border-amber-500/20 overflow-hidden">
+              <CardContent className="p-8 md:p-12">
+                <div className={`flex flex-col md:flex-row items-center gap-8 ${isArabic ? '' : 'md:flex-row-reverse'}`}>
+                  {/* CEO Image */}
+                  <div className="flex-shrink-0">
+                    <div className="relative">
+                      <div className="absolute inset-0 bg-gradient-to-br from-amber-500/30 to-orange-500/30 rounded-2xl blur-xl"></div>
+                      <img 
+                        src="/images/ceo.png" 
+                        alt="CEO" 
+                        className="relative w-48 h-48 md:w-56 md:h-56 rounded-2xl object-cover border-2 border-amber-500/30 shadow-2xl"
+                      />
+                      {/* Badge */}
+                      <div className="absolute -bottom-3 -right-3 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl px-4 py-2 shadow-lg">
+                        <div className="flex items-center gap-2">
+                          <Award className="w-4 h-4 text-white" />
+                          <span className="text-white text-sm font-semibold">{isArabic ? 'المدير التنفيذي' : 'CEO'}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* CEO Info */}
+                  <div className={`flex-1 ${isArabic ? 'text-right' : 'text-left'}`}>
+                    <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
+                      {isArabic ? 'أحمد المصري' : 'Ahmed Al-Masri'}
+                    </h3>
+                    <p className="text-amber-400 font-medium mb-4">{isArabic ? 'المؤسس والمدير التنفيذي' : 'Founder & CEO'}</p>
+                    <p className="text-muted-foreground mb-6 leading-relaxed">
+                      {isArabic 
+                        ? 'خبرة تزيد عن 10 سنوات في أسواق المال، متخصص في التحليل الفني والتداول الآلي. أسس InfinityAlgoPower لمساعدة المتداولين على تحقيق أهدافهم المالية.'
+                        : 'Over 10 years of experience in financial markets, specializing in technical analysis and algorithmic trading. Founded InfinityAlgoPower to help traders achieve their financial goals.'
+                      }
+                    </p>
+                    <div className="flex flex-wrap gap-3">
+                      <Badge className="bg-amber-500/10 text-amber-400 border-amber-500/20">
+                        <Briefcase className="w-3 h-3 ml-1" />
+                        {isArabic ? '+10 سنوات خبرة' : '10+ Years Experience'}
+                      </Badge>
+                      <Badge className="bg-emerald-500/10 text-emerald-400 border-emerald-500/20">
+                        <TrendingUp className="w-3 h-3 ml-1" />
+                        {isArabic ? 'تحليل فني' : 'Technical Analysis'}
+                      </Badge>
+                      <Badge className="bg-blue-500/10 text-blue-400 border-blue-500/20">
+                        <Bot className="w-3 h-3 ml-1" />
+                        {isArabic ? 'تداول آلي' : 'Algorithmic Trading'}
+                      </Badge>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+          
+          {/* Team Members */}
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {/* Ryan */}
+            <Card className="card-hover bg-card/50 backdrop-blur-sm border-amber-500/10 overflow-hidden group">
+              <CardContent className="p-6 text-center">
+                <div className="relative mb-6">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  <img 
+                    src="/images/team-ryan.png" 
+                    alt="Ryan" 
+                    className="relative w-32 h-32 rounded-full object-cover mx-auto border-2 border-blue-500/30 shadow-lg"
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-1">{isArabic ? 'ريان' : 'Ryan'}</h3>
+                <p className="text-blue-400 font-medium text-sm mb-3">{isArabic ? 'محلل فني' : 'Technical Analyst'}</p>
+                <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+                  {isArabic 
+                    ? 'متخصص في تحليل الشارتات وتحديد نقاط الدخول والخروج بدقة عالية'
+                    : 'Specialized in chart analysis and identifying precise entry and exit points'
+                  }
+                </p>
+                <Badge className="bg-blue-500/10 text-blue-400 border-blue-500/20">
+                  <Calendar className="w-3 h-3 ml-1" />
+                  {isArabic ? '4 سنوات خبرة' : '4 Years Experience'}
+                </Badge>
+              </CardContent>
+            </Card>
+            
+            {/* Jeremy */}
+            <Card className="card-hover bg-card/50 backdrop-blur-sm border-amber-500/10 overflow-hidden group">
+              <CardContent className="p-6 text-center">
+                <div className="relative mb-6">
+                  <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-orange-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  <img 
+                    src="/images/team-jeremy.png" 
+                    alt="Jeremy" 
+                    className="relative w-32 h-32 rounded-full object-cover mx-auto border-2 border-amber-500/30 shadow-lg"
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-1">{isArabic ? 'جيريمي' : 'Jeremy'}</h3>
+                <p className="text-amber-400 font-medium text-sm mb-3">{isArabic ? 'مطور روبوتات' : 'EA Developer'}</p>
+                <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+                  {isArabic 
+                    ? 'خبير في تطوير روبوتات التداول الآلية واستراتيجيات التحليل الفني'
+                    : 'Expert in developing automated trading robots and technical analysis strategies'
+                  }
+                </p>
+                <Badge className="bg-amber-500/10 text-amber-400 border-amber-500/20">
+                  <Calendar className="w-3 h-3 ml-1" />
+                  {isArabic ? '5 سنوات خبرة' : '5 Years Experience'}
+                </Badge>
+              </CardContent>
+            </Card>
+            
+            {/* Samiha */}
+            <Card className="card-hover bg-card/50 backdrop-blur-sm border-amber-500/10 overflow-hidden group">
+              <CardContent className="p-6 text-center">
+                <div className="relative mb-6">
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  <img 
+                    src="/images/team-samiha.png" 
+                    alt="Samiha" 
+                    className="relative w-32 h-32 rounded-full object-cover mx-auto border-2 border-purple-500/30 shadow-lg"
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-1">{isArabic ? 'سميحة' : 'Samiha'}</h3>
+                <p className="text-purple-400 font-medium text-sm mb-3">{isArabic ? 'مدربة تداول' : 'Trading Instructor'}</p>
+                <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+                  {isArabic 
+                    ? 'متخصصة في تعليم أساسيات التداول وإدارة المخاطر للمبتدئين'
+                    : 'Specialized in teaching trading fundamentals and risk management for beginners'
+                  }
+                </p>
+                <Badge className="bg-purple-500/10 text-purple-400 border-purple-500/20">
+                  <Calendar className="w-3 h-3 ml-1" />
+                  {isArabic ? '3 سنوات خبرة' : '3 Years Experience'}
+                </Badge>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
