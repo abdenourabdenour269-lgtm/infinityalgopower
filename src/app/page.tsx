@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
+import Image from 'next/image'
 import {
   TrendingUp,
   Bot,
@@ -182,56 +183,89 @@ export default function Home() {
         <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         
         <div className="container mx-auto px-4 py-20 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 mb-8 animate-fade-in-up">
-              <Zap className="w-4 h-4 text-amber-500" />
-              <span className="text-amber-400 text-sm font-medium">{t.hero.badge}</span>
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            {/* Text Content */}
+            <div className="flex-1 max-w-2xl text-center lg:text-right">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 mb-8 animate-fade-in-up">
+                <Zap className="w-4 h-4 text-amber-500" />
+                <span className="text-amber-400 text-sm font-medium">{t.hero.badge}</span>
+              </div>
+              
+              {/* Main Heading */}
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+                <span className="text-foreground">{t.hero.title1} </span>
+                <span className="text-gold-gradient">{t.hero.title2}</span>
+                <br />
+                <span className="text-foreground">{t.hero.title3}</span>
+              </h1>
+              
+              {/* Subtitle */}
+              <p className="text-lg md:text-xl text-muted-foreground mb-10 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+                {t.hero.subtitle}
+              </p>
+              
+              {/* CTA Buttons */}
+              <div className={`flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up`} style={{ animationDelay: '0.3s' }}>
+                <Button
+                  size="lg"
+                  className="btn-gold px-8 py-6 text-lg font-semibold rounded-xl glow-gold"
+                  onClick={() => window.open(portalUrl, '_blank')}
+                >
+                  {t.hero.cta_explore}
+                  <ArrowIcon className={`${isArabic ? 'mr' : 'ml'}-2 h-5 w-5`} />
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="btn-outline-gold px-8 py-6 text-lg font-semibold rounded-xl"
+                  onClick={() => window.open(portalUrl, '_blank')}
+                >
+                  {t.hero.cta_academy}
+                  <GraduationCap className={`${isArabic ? 'mr' : 'ml'}-2 h-5 w-5`} />
+                </Button>
+              </div>
             </div>
             
-            {/* Main Heading */}
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-              <span className="text-foreground">{t.hero.title1} </span>
-              <span className="text-gold-gradient">{t.hero.title2}</span>
-              <br />
-              <span className="text-foreground">{t.hero.title3}</span>
-            </h1>
-            
-            {/* Subtitle */}
-            <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              {t.hero.subtitle}
-            </p>
-            
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-              <Button
-                size="lg"
-                className="btn-gold px-8 py-6 text-lg font-semibold rounded-xl glow-gold"
-                onClick={() => window.open(portalUrl, '_blank')}
-              >
-                {t.hero.cta_explore}
-                <ArrowIcon className={`${isArabic ? 'mr' : 'ml'}-2 h-5 w-5`} />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="btn-outline-gold px-8 py-6 text-lg font-semibold rounded-xl"
-                onClick={() => window.open(portalUrl, '_blank')}
-              >
-                {t.hero.cta_academy}
-                <GraduationCap className={`${isArabic ? 'mr' : 'ml'}-2 h-5 w-5`} />
-              </Button>
-            </div>
-            
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center p-4">
-                  <div className="text-3xl md:text-4xl font-bold text-gold-gradient mb-2">{stat.value}</div>
-                  <div className="text-muted-foreground text-sm">{stat.label}</div>
+            {/* Hero Image */}
+            <div className="flex-1 max-w-xl lg:max-w-2xl animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+              <div className="relative">
+                {/* Glow Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-amber-500/20 to-orange-500/20 rounded-3xl blur-2xl"></div>
+                {/* Image Container */}
+                <div className="relative rounded-3xl overflow-hidden border border-amber-500/20 shadow-2xl">
+                  <img 
+                    src="/images/trading-hero.png" 
+                    alt="Professional Trading Platform" 
+                    className="w-full h-auto object-cover"
+                  />
+                  {/* Overlay Gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent"></div>
                 </div>
-              ))}
+                {/* Floating Badge */}
+                <div className="absolute -bottom-4 -right-4 bg-card/90 backdrop-blur-sm rounded-xl p-4 border border-amber-500/20 shadow-lg">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center">
+                      <TrendingUp className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <div className="text-sm font-semibold text-foreground">Live Signals</div>
+                      <div className="text-xs text-emerald-400">+85% Accuracy</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+          
+          {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center p-4 bg-card/30 rounded-xl border border-amber-500/10">
+                <div className="text-3xl md:text-4xl font-bold text-gold-gradient mb-2">{stat.value}</div>
+                <div className="text-muted-foreground text-sm">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
         
