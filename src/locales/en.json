@@ -1,0 +1,123 @@
+{
+  "hero": {
+    "badge": "The #1 Trading Platform in the Middle East",
+    "title1": "Professional Trading",
+    "title2": "Tools",
+    "title3": "for Success",
+    "subtitle": "Advanced indicators, automated robots, and educational courses to achieve sustainable profits in financial markets",
+    "cta_explore": "Explore Products",
+    "cta_academy": "Join Academy"
+  },
+  "stats": {
+    "clients": "Happy Clients",
+    "products": "Digital Products",
+    "satisfaction": "Satisfaction Rate",
+    "support": "Technical Support"
+  },
+  "categories": {
+    "badge": "Product Categories",
+    "title1": "Our Main",
+    "title2": "Products",
+    "subtitle": "Discover our diverse range of professional trading tools designed for success"
+  },
+  "indicators": {
+    "title": "Indicators",
+    "subtitle": "Indicators",
+    "description": "Professional non-repainting trading indicators for TradingView and MT4/MT5. High accuracy and reliable signals.",
+    "feature1": "Non-repainting",
+    "feature2": "Compatible with all platforms",
+    "feature3": "Precise entry and exit signals",
+    "cta": "Explore Now"
+  },
+  "robots": {
+    "title": "Robots",
+    "subtitle": "Expert Advisors",
+    "description": "AI-powered automated trading robots. Trade automatically without manual intervention.",
+    "feature1": "Advanced AI",
+    "feature2": "24/7 Trading",
+    "feature3": "Smart risk management",
+    "cta": "Explore Now"
+  },
+  "courses": {
+    "title": "Educational Courses",
+    "subtitle": "Educational Courses",
+    "description": "Comprehensive courses for beginners and professionals. Learn trading strategies from experts.",
+    "feature1": "From beginner to pro",
+    "feature2": "Certified credentials",
+    "feature3": "Direct instructor support",
+    "cta": "Explore Now"
+  },
+  "featured": {
+    "badge": "Featured Products",
+    "title1": "Best",
+    "title2": "Products",
+    "subtitle": "The most requested and trusted products by thousands of traders",
+    "viewAll": "View All Products",
+    "buyNow": "Buy Now",
+    "reviews": "reviews",
+    "category_indicator": "Indicator",
+    "category_robot": "Robot",
+    "category_course": "Course",
+    "badge_bestseller": "Bestseller",
+    "badge_discount": "Discount",
+    "badge_new": "New",
+    "badge_ai": "AI",
+    "badge_special": "Special Offer",
+    "badge_popular": "Popular"
+  },
+  "features": {
+    "badge": "Why Us?",
+    "title1": "Features That",
+    "title2": "Make Us the Best",
+    "subtitle": "We offer you an exceptional experience with quality and satisfaction guarantee",
+    "tested_title": "Tested & Guaranteed Products",
+    "tested_desc": "All our products have been tested and verified by professional traders",
+    "support_title": "24/7 Technical Support",
+    "support_desc": "Specialized support team available around the clock to help you",
+    "updates_title": "Free Lifetime Updates",
+    "updates_desc": "Get all future updates for free with a single purchase",
+    "community_title": "Active Trading Community",
+    "community_desc": "Join a community of thousands of traders and share experiences"
+  },
+  "portal": {
+    "title": "Client Portal",
+    "description": "Get instant access to all your products, updates, and technical support through the dedicated client portal",
+    "loginBtn": "Access Portal",
+    "communityBtn": "Join Community"
+  },
+  "quickLinks": {
+    "support_title": "Technical Support",
+    "support_subtitle": "24/7 Help",
+    "community_title": "Community",
+    "community_subtitle": "Share Experiences",
+    "store_title": "Store",
+    "store_subtitle": "Browse Products"
+  },
+  "cta": {
+    "title": "Ready to Start Your",
+    "title2": "Success Journey?",
+    "subtitle": "Join thousands of successful traders and get your professional tools today",
+    "startBtn": "Start Now",
+    "contactBtn": "Contact Us"
+  },
+  "footer": {
+    "description": "Your trusted platform for professional trading tools and education. We help you achieve success in financial markets.",
+    "quickLinks": "Quick Links",
+    "store": "Store",
+    "supportTitle": "Support",
+    "helpCenter": "Help Center",
+    "community": "Community",
+    "faq": "FAQ",
+    "refundPolicy": "Refund Policy",
+    "contact": "Contact Us",
+    "location": "Online - Worldwide",
+    "copyright": "All rights reserved.",
+    "terms": "Terms of Use",
+    "privacy": "Privacy Policy"
+  },
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "startNow": "Start Now"
+  }
+}
